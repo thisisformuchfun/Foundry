@@ -1,0 +1,32 @@
+Business Source License 1.1 (BUSL-1.1)
+Licensor: Meatbag Labs LLC
+Licensed Work: ForgeQuote — Hackathon Starter (the “Licensed Work”)
+Additional Use Grant: You may use, copy, modify, compile, and test the Licensed Work for non‑production purposes (including evaluation, internal development, research, and demonstrations). Limited production use is permitted if and only if the total gross revenue attributable to the Licensed Work or any derivative work is less than USD $5,000 in any 12‑month period. Any other production use requires a Commercial License from the Licensor.
+Change Date: 2029-01-01
+Change License: Apache License, Version 2.0
+
+Notice
+The Licensed Work is provided under the terms of this Business Source License 1.1 (the “License”). Any use of the Licensed Work other than as authorized under this License or relevant law is prohibited.
+
+License Grant
+Subject to the terms of this License, the Licensor grants you a non‑exclusive, worldwide, non‑transferable, non‑sublicensable, royalty‑free license to the Licensed Work for the Additional Use Grant described above until the Change Date. After the Change Date, the Licensed Work will be made available under the Change License.
+
+Production Use
+“Production Use” means any use of the Licensed Work, or a work based on the Licensed Work, in or for the direct or indirect provision of a service to third parties, or in a product, application, or process for internal or external use other than evaluation, development, testing, or demonstration.
+
+Commercial License
+If you wish to use the Licensed Work for Production Use beyond the Additional Use Grant, you must obtain a separate commercial license from the Licensor. See COMMERCIAL_LICENSE_OFFER.md.
+
+Covenants
+You must retain all copyright, patent, and license notices in all copies and substantial portions of the Licensed Work. You must not misrepresent the origin of the Licensed Work. If you modify the Licensed Work and distribute it, you must clearly mark your changes.
+
+Termination
+Your rights under this License automatically terminate if you breach it. Upon termination, you must cease use of the Licensed Work and destroy all copies. Termination does not affect any right of the Licensor to seek damages or other remedies.
+
+Change License
+On the Change Date, the Licensed Work will be available under the Change License listed above. The Licensor may also, at its option, make prior versions available under different terms.
+
+Disclaimer
+THE LICENSED WORK IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON‑INFRINGEMENT. IN NO EVENT SHALL THE LICENSOR OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE LICENSED WORK OR THE USE OR OTHER DEALINGS IN THE LICENSED WORK.
+
+This License is not approved as an open‑source license by the Open Source Initiative. For clarity, “BUSL‑1.1” here refers to a Business Source style license; consult counsel for commercial deployments.
