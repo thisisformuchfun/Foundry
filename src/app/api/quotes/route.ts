@@ -52,13 +52,15 @@ Rules:
 - Diagrams: include a readable Mermaid system diagram and a simple flow (from RFQ → design → proto → test → deliver).
 - Be conservative but not outrageous.`
 
-   const resp = await (openai.responses.create as any)({
+const resp = await (openai.responses.create as any)({
   model: MODEL,
   instructions,
   input: `Project RFQ / requirements:\n${inputText}`,
-  response_format: {
-    type: "json_schema",
-    json_schema // keep as-is (your object with name/schema/strict)
+  text: {
+    format: {
+      type: "json_schema",
+      json_schema // { name, schema, strict }
+    }
   }
 })
 
