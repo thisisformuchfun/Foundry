@@ -111,11 +111,11 @@ public/
 ## How It Works
 ```mermaid
 flowchart LR
-  A[RFQ Text] --> B[POST /api/quotes]
-  B --> C[OpenAI Responses API<br/>response_format: json_schema]
-  C --> D[Validated JSON<br/>(Zod)]
-  D --> E[(SQLite via Prisma)]
-  E --> F[Home Page Renders<br/>(BOM/Labor/Schedule/Pricing/Diagrams)]
+  A([RFQ Text]) --> B([POST /api/quotes])
+  B --> C([OpenAI Responses API\nresponse_format: json_schema])
+  C --> D([Validated JSON – Zod])
+  D --> E([SQLite via Prisma])
+  E --> F([Home page renders\nBOM • Labor • Schedule • Pricing • Diagrams])
 ```
 
 - We send the RFQ to the **Responses API** with a **JSON Schema** (Structured Outputs).  
