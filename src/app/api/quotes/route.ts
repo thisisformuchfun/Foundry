@@ -52,19 +52,27 @@ Rules:
 - Diagrams: include a readable Mermaid system diagram and a simple flow (from RFQ → design → proto → test → deliver).
 - Be conservative but not outrageous.`
 
-    const resp = await openai.responses.create({
-      model: MODEL,
-      instructions,
-      input: `Project RFQ / requirements:\n${inputText}`,
-      response_format: { type: "json_schema", json_schema }
-    })
+   const resp = await (openai.responses.create as any)({
+  model: MODEL,
+  instructions,
+  input: `Project RFQ / requirements:\n${inputText}`,
+  response_format: {
+    type: "json_schema",
+    json_schema // keep as-is (your object with name/schema/strict)
+  }
+})
 
-    const output_text = (resp as any).output_text
-    const parsed = QuoteOutput.safeParse(JSON.parse(output_text))
-    if (!parsed.success) {
-      console.error(parsed.error)
-      return new Response('Model returned invalid JSON. Try again with more detail.', { status: 500 })
-    }
+// Be resilient to SDK shape differences:
+const output_text =
+  (resp as any).output_text ??
+  (resp as any).output?.[0]?.content?.[0]?.text ??
+  JSON.stringify(resp)
+
+const parsed = QuoteOutput.safeParse(JSON.parse(output_text))
+if (!parsed.success) {
+  console.error(parsed.error)
+  return new Response('Model returned invalid JSON. Try again with more detail.', { status: 500 })
+}
 
     const saved = await prisma.quote.create({
       data: { title: title?.trim() || 'Untitled RFQ', inputText, outputJson: JSON.stringify(parsed.data, null, 2), status: 'generated' }
