@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ForgeQuote | Instant Engineering Quotes</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Tailwind CDN → one‑liner for rapid styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body data-webhook="https://pro-mutt-recently.ngrok-free.app/webhook-test/forger" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100 font-inter min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="w-full max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 group">
+      <!-- logo -->
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-indigo-400 group-hover:stroke-indigo-300 transition">
+        <path d="M4 4H20V20H4V4Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4 9H20" stroke-width="2" stroke-linecap="round"/>
+        <path d="M9 4V20" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="text-xl font-bold tracking-tight">ForgeQuote</span>
+    </a>
+    <nav class="hidden sm:flex items-center gap-6 text-sm">
+      <a href="#features" class="hover:text-indigo-300">Features</a>
+      <a href="#how" class="hover:text-indigo-300">How it works</a>
+      <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white font-medium px-4 py-2 rounded-lg transition">Login</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main class="flex-1 w-full max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12 py-16 md:py-24">
+    <div class="md:w-1/2 space-y-6">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Instant AI‑Powered Engineering Quotes</h1>
+      <p class="text-lg/relaxed text-slate-300">Upload CAD, sketches, or BOMs and get a <span class="text-indigo-400 font-medium">real, locked‑in price</span> in seconds. No emails, no phone tag—just answers.</p>
+      <ul class="space-y-2 text-slate-300">
+        <li>⚡ <em>Lightning‑fast</em> estimation engine</li>
+        <li>🔐 End‑to‑end encrypted uploads</li>
+        <li>✅ Human verification before anything is built</li>
+      </ul>
+    </div>
+
+    <!-- Quote Widget -->
+<!-- Quote Widget -->
+<div
+  class="md:w-1/2 w-full bg-slate-800/60 backdrop-blur rounded-2xl shadow-xl p-8"
+>
+       <form id="quoteForm" enctype="multipart/form-data" class="flex flex-col gap-4">
+        <label class="text-sm font-medium">Attach file(s)</label>
+        <input required name="file" type="file" multiple class="file:px-4 file:py-2 file:bg-indigo-600 hover:file:bg-indigo-700 file:text-white file:rounded-lg" />
+        <textarea required name="desc" rows="4" placeholder="Describe the part, materials, tolerances…" class="p-3 bg-slate-900/60 border border-slate-700 rounded-lg focus:ring-indigo-500"></textarea>
+        <button type="submit" class="w-full py-3 bg-indigo-500 hover:bg-indigo-600 rounded-lg font-semibold">Get Quote →</button>
+      </form>
+
+  <!-- Response injected by JS (optional) -->
+  <div id="quoteBox" class="mt-6 hidden"></div>
+</div>
+
+  </main>
+
+  <!-- Features -->
+  <section id="features" class="w-full max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-12">
+    <article class="space-y-3">
+      <h3 class="text-xl font-bold text-indigo-400">Trusted Pricing</h3>
+      <p class="text-slate-300">Our model is trained on thousands of real‑world fabrication invoices so you get numbers you can bank on.</p>
+    </article>
+    <article class="space-y-3">
+      <h3 class="text-xl font-bold text-indigo-400">Secure Payments</h3>
+      <p class="text-slate-300">Pay only if you love the quote. Funds are held in escrow until our engineers thumbs‑up the project.</p>
+    </article>
+    <article class="space-y-3">
+      <h3 class="text-xl font-bold text-indigo-400">Expert Review</h3>
+      <p class="text-slate-300">Every submission hits a human engineer at <strong>Meatbag Labs</strong> for sanity‑check before we start cutting chips.</p>
+    </article>
+  </section>
+
+  <!-- How -->
+  <section id="how" class="w-full max-w-7xl mx-auto px-6 pb-24">
+    <h2 class="text-3xl font-bold mb-8">How it works</h2>
+    <ol class="space-y-4">
+      <li><span class="font-semibold text-indigo-400">1.</span> Upload your design files & specs.</li>
+      <li><span class="font-semibold text-indigo-400">2.</span> AI crunches manufacturing costs in real‑time.</li>
+      <li><span class="font-semibold text-indigo-400">3.</span> Securely pay to lock the price (or walk away free).</li>
+      <li><span class="font-semibold text-indigo-400">4.</span> Meatbag Labs engineers confirm and schedule production.</li>
+    </ol>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-auto w-full bg-slate-900/60 py-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-slate-400">
+      <p>© 2025 ForgeQuote. All rights reserved.</p>
+      <p class="flex items-center gap-1">by <span class="font-semibold text-indigo-400">Meatbag Labs</span></p>
+    </div>
+  </footer>
+<script>
+    const WEBHOOK_URL = document.body.dataset.webhook.trim();
+    if(!WEBHOOK_URL.startsWith('https://')) console.warn('⚠️  Set your live webhook URL in <body data-webhook="…">');
+
+    const form = document.getElementById('quoteForm');
+    const box  = document.getElementById('quoteBox');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();                         // stop native GET
+      box.classList.remove('hidden');
+      box.innerHTML = '<p class="animate-pulse">Crunching…</p>';
+
+      try {
+        const res = await fetch(WEBHOOK_URL, { method:'POST', body:new FormData(form) });
+        if(!res.ok) throw new Error('HTTP '+res.status);
+        const d = await res.json();
+        if(d.quote){
+          box.innerHTML = `<div class="bg-slate-800 p-6 rounded-xl space-y-4">
+            <h2 class="text-2xl font-bold">$${Number(d.quote).toFixed(2)}</h2>
+            <p class="text-slate-300">${d.breakdown}</p>
+            <a href="${d.paymentLink}" class="inline-block bg-indigo-500 hover:bg-indigo-600 py-3 px-6 rounded-lg font-semibold">Pay &amp; Start</a>
+          </div>`;
+        } else {
+          box.innerHTML = '<p class="text-red-400">No quote returned. Check server logs.</p>';
+        }
+      } catch(err){
+        box.innerHTML = '<p class="text-red-400">Error: '+err.message+'</p>';
+      }
+    });
+  </script>
+  
+</body>
+</html>
